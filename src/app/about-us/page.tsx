@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import {
   Box,
   Button,
@@ -14,8 +13,10 @@ import {
 
 import NavBar from '@/components/navbar'
 
-export default function Home() {
+
+export default function About() {
   return (
     <NavBar />
+
   );
 }
