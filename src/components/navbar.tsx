@@ -15,6 +15,7 @@ import {
   Spacer,
   InputGroup,
   InputLeftElement,
+  Text,
   useBreakpointValue,
 } from "@chakra-ui/react";
 import { Image } from "@chakra-ui/react";
@@ -27,7 +28,16 @@ export default function NavBar() {
   const isDesktop = useBreakpointValue({ base: false, lg: true });
   return (
     // <Container py={{ base: "3", lg: "4" }}>
-      <Flex minWidth="max-content" alignItems="center" gap="2" py={{ base: "3", lg: "4" }} px={{ base: "3", lg: "4" }} >
+    <Container
+      maxW="150ch"
+      // pt={{ base: "5", lg: "5" }}
+      py={{ base: "6", lg: "6" }}
+
+      px={{ base: "3", lg: "4" }}
+      // alignItems="center"
+      h="calc(13vh)"
+    >
+      <Flex px={{ base: "3", lg: "4" }}>
         <Box>
           <Link href="/">
             <Logo />
@@ -42,37 +52,37 @@ export default function NavBar() {
                 <Button>
                   <Link
                     href="/about-us"
-                    color="black"
+                    color="grey"
                     _hover={{ color: "blue.500" }}
                   >
-                    About Us
+                    <Text fontSize="14px">About Us</Text>
                   </Link>
                 </Button>
                 <Button>
                   <Link
                     href="/services"
-                    color="black"
+                    color="grey"
                     _hover={{ color: "blue.500" }}
                   >
-                    Services
+                    <Text fontSize="14px">Services</Text>
                   </Link>
                 </Button>
                 <Button>
                   <Link
                     href="/resources"
-                    color="black"
+                    color="grey"
                     _hover={{ color: "blue.500" }}
                   >
-                    Resources
+                    <Text fontSize="14px">Resources</Text>
                   </Link>
                 </Button>
                 <Button>
                   <Link
                     href="/contact"
-                    color="black"
+                    color="grey"
                     _hover={{ color: "blue.500" }}
                   >
-                    Contact
+                    <Text fontSize="14px">Contact</Text>
                   </Link>
                 </Button>
               </ButtonGroup>
@@ -86,6 +96,7 @@ export default function NavBar() {
           </HStack>
         </Box>
       </Flex>
+    </Container>
     // </Container>
   );
 }
